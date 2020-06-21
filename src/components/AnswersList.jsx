@@ -1,12 +1,11 @@
 import React from 'react';
-import Answer from './Answer';
+import { Answer } from './index';
 
 const AnswersList = (props) => {
-  const { answers } = props;
   return (
     <div className="c-grid__answer">
-      {answers.map((value, index) => {
-        return <Answer content={value.content} key={index.toString()} />;
+      {props.answers.map((answer, index) => {
+        return <Answer content={answer.content} nextId={answer.nextId} key={index.toString()} select={props.select} />;
       })}
     </div>
   );
