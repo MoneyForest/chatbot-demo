@@ -1,6 +1,6 @@
-import React from "react";
-import defaultDataset from "./dataset";
-import "./assets/styles/style.css";
+import React from 'react';
+import defaultDataset from './dataset';
+import './assets/styles/style.css';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -8,7 +8,7 @@ export default class App extends React.Component {
     this.state = {
       answers: [],
       chats: [],
-      currentId: "init",
+      currentId: 'init',
       dataset: defaultDataset,
       open: false,
     };
@@ -18,7 +18,9 @@ export default class App extends React.Component {
     return (
       <div className="App">
         <section className="c-section">
-          <div className="c-box">{this.state.currentId}</div>
+          <div className="c-box">
+            <AnswersList />
+          </div>
         </section>
       </div>
     );
